@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tour Management</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="sidebar">
+
+<div class="logo">
+<h3>Tourism ERP</h3>
+</div>
+
+<ul>
+
+<li><a href="../index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+
+<li><a href="users.html"><i class="fas fa-users"></i> Users</a></li>
+
+<li class="active">
+    <a href="tours.html">
+        <i class="fas fa-map"></i> Tours
+    </a>
+</li>
+
+<li><a href="bookings.html"><i class="fas fa-calendar-check"></i> Bookings</a></li>
+
+<li><a href="customers.html"><i class="fas fa-user-friends"></i> Customers</a></li>
+
+<li><a href="staff.html"><i class="fas fa-user-tie"></i> Staff</a></li>
+
+<li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+
+</ul>
+
+</div>
+
+<div class="main-content">
+
+<h2>Tour Management</h2>
+
+<div class="card p-3 mb-4">
+
+<h4>Add New Tour</h4>
+
+<input type="hidden" id="tourId">
+
+<input type="text"
+       id="tourName"
+       class="form-control mb-2"
+       placeholder="Tour Name">
+
+<input type="text"
+       id="destination"
+       class="form-control mb-2"
+       placeholder="Destination">
+
+<input type="number"
+       id="duration"
+       class="form-control mb-2"
+       placeholder="Duration">
+
+<input type="number"
+       id="price"
+       class="form-control mb-2"
+       placeholder="Price">
+
+<input type="text"
+       id="availability"
+       class="form-control mb-2"
+       placeholder="Availability">
+
+<div>
+
+<button class="btn btn-success"
+        onclick="saveTour()">
+
+<i class="fas fa-save"></i>
+Save Tour
+
+</button>
+
+<button class="btn btn-warning"
+        id="updateBtn"
+        onclick="updateTour()"
+        style="display:none;">
+Update
+</button>
+
+</div>
+
+</div>
+
+<div class="card p-3">
+
+<h4>Tour List</h4>
+
+<table class="table table-bordered">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Destination</th>
+<th>Duration</th>
+<th>Price</th>
+<th>Availability</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tourTable"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="../js/tours.js"></script>
+
+</body>
+</html>
